@@ -19,13 +19,13 @@
 						<div class="nav-item dropdown">
 							<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">About Us</a>
 							<div class="dropdown-menu" style="background: #BADDFB;">
-								<a href="{{ route('our.misson') }}" class="dropdown-item">About Us</a>
-								<a href="{{ route('our.visson') }}" class="dropdown-item">Mission</a>
-								<a href="" class="dropdown-item">Vision</a>
+								<a href="{{ route('about.us') }}" class="dropdown-item">About Us</a>
+								<a href="{{ route('our.misson') }}" class="dropdown-item">Mission</a>
+								<a href="{{ route('our.visson') }}" class="dropdown-item">Vision</a>
 							</div>
 						</div>
 						<a href="{{ route('news.event') }}" class="nav-item nav-link">News and Event</a>
-						<a href="contact.html" class="nav-item nav-link">Contact Us</a>
+						<a href="{{ route('contract.us') }}" class="nav-item nav-link">Contact Us</a>
 						<a href="" class="nav-item nav-link">Login</a>
 					</div>
 					<div class="navbar-nav">
