@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 Route::get('/', 'Frontend\FrontenController@index') -> name('users.view');
+Route::get('/about-us', 'Frontend\FrontenController@aboutUs') -> name('about.us');
+Route::get('/misson', 'Frontend\FrontenController@Misson') -> name('our.misson');
+Route::get('/visson', 'Frontend\FrontenController@Visson') -> name('our.visson');
+Route::get('/news-event', 'Frontend\FrontenController@newsEvent') -> name('news.event');
 Route::get('/news-event/details/{id}', 'Frontend\FrontenController@newsDetails') -> name('news.event.details');
 Auth::routes();
 Route::get('/home', 'HomeController@index') -> name('home');
