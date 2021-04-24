@@ -207,6 +207,12 @@ $route = Route::current()->getName();
                             <p>View Contract</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route ('contracts.communicate') }}" class="nav-link {{($route=='contracts.communicate')?'active':''}}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>View Communicate</p>
+                        </a>
+                    </li>
 
                 </ul>
             </li>

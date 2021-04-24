@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Model\Communicate;
 use App\Model\Contract;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,6 +21,16 @@ class ContractController extends Controller
         //dd($data['countLogo']);
 
         return view('backend.contract.view-contract', $data);
+
+        // return view('backend.layouts.home');
+    }
+    public function viewCommunicate()
+    {
+        
+        $allData = Communicate::orderBy('id','desc')->get();
+        
+        
+        return view('backend.contract.view-communicate',compact('allData'));
 
         // return view('backend.layouts.home');
     }
@@ -77,5 +88,13 @@ class ContractController extends Controller
        
         $contract->delete();
         return redirect()->route('contracts.view')->with('success', 'Contract Deleted Successfully');
+    }
+    public function deleteCommunicate($id)
+    {
+        $communicate = Communicate::find($id);
+
+       
+        $communicate->delete();
+        return redirect()->route('contracts.communicate')->with('success', 'Communicate Deleted Successfully');
     }
 }

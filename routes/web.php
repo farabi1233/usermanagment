@@ -96,6 +96,8 @@ Route::prefix('contracts')->group(function(){
     Route::get('/delete/{id}', 'Backend\ContractController@deleteContract') -> name('contracts.delete');
     Route::post('/update/{id}', 'Backend\ContractController@updateContract') -> name('contracts.update');
     Route::post('/store', 'Backend\ContractController@storeContract') -> name('contracts.store');
+    Route::get('/communicate', 'Backend\ContractController@viewCommunicate') -> name('contracts.communicate');
+    Route::get('/communicate/{id}', 'Backend\ContractController@deleteCommunicate') -> name('communicate.delete');
   
 });
 Route::prefix('abouts')->group(function(){

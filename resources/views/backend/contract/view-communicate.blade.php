@@ -40,10 +40,10 @@
 
 
                             <h4>
-                                View Contract
+                               Communicate List 
 
-                                @if($countContract<1) <a class=" btn btn-success float-right" href="{{ route('contracts.add')}}"> <i class="fa fa-plus-circle"></i> Add Contract</a>
-                                    @endif
+                                
+                                    
 
                             </h4>
 
@@ -61,35 +61,31 @@
                                     <thead>
                                         <tr>
                                             <th>SL.</th>
-
+                                            <th>Name</th>
                                             <th>Address</th>
-                                            <th>Mobile</th>
+                                            <th>Mobile No</th>
                                             <th>Email</th>
-                                            <th>Facebook</th>
-                                            <th>Tweeter</th>
-                                            <th>Google</th>
-
-
+                                            <th>Message</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
-                                        @foreach($allData as $key =>$contract)
+                                        @foreach($allData as $key =>$communicate)
                                         <tr>
                                             <td>{{ $key+1 }}</td>
 
 
-                                            <td>{{$contract->address}}</td>
-                                            <td>{{$contract->mobile}}</td>
-                                            <td>{{$contract->email}}</td>
-                                            <td>{{$contract->facebook}}</td>
-                                            <td>{{$contract->twitter}}</td>
-                                            <td>{{$contract->google}}</td>
+                                            <td>{{$communicate->name}}</td>
+                                            <td>{{$communicate->address}}</td>
+                                            <td>{{$communicate->mobile_no}}</td>
+                                            <td>{{$communicate->email}}</td>
+                                            <td>{{$communicate->msg}}</td>
+                                            
 
                                             <td>
-                                                <a class="btn btn-sm btn-primary" href="{{ route('contracts.edit',$contract->id)}}"> <i class="fa fa-edit"></i>Edit</a>
-                                                <a class="btn btn-sm btn-danger" id="delete" href="{{ route('contracts.delete',$contract->id)}}"> <i class="fa fa-trash"></i>Delete</a>
+                                                
+                                                <a class="btn btn-sm btn-danger" id="delete" href="{{ route('communicate.delete',$communicate->id)}}"> <i class="fa fa-trash"></i>Delete</a>
                                             </td>
 
 
